@@ -11,25 +11,38 @@ import com.survivalcoding.domain.model.Product;
 // 다형성
 
 public class ProductRepository {
-	public static void main(String[] args) {
-		// 삽입, 삭제가 빈번할 때 항상 동일 성능, but ArrayList보다 검색이 느려
-		// 메모리 조금 더 많이 먹어
-		List<Product> products = new LinkedList<>();
 
-		// 크기가 커질수록 삽입, 삭제가 느려짐, 내부적으로 배열이라 성능이 일단 빨라
-		List<Product> products2 = new ArrayList<>();
-
-		Product[] product3 = new Product[3];
-
-		sort(Arrays.asList(product3));
-
-		sort(products);
-		Stack stack = (Stack) sort(products2);
+	private List<Product> products = new ArrayList<>();
+	
+	public ProductRepository() {
+		Product phone = new Product("P1234", "iPhone 6s", 800000);
+		phone.setDescription("4.7-inch, 1334 X 750 Retina HD display");
+		phone.setCategory("Smart Phone");
+		phone.setManufaturer("Apple");
+		phone.setUnitsInStock(1000);
+		phone.setCondition("New");
+		
+		Product notebook = new Product("P1235", "LG PC 그램", 1500000);
+		phone.setDescription("4.7-inch, 1334 X 750 Retina HD display");
+		phone.setCategory("!Smart Phone");
+		phone.setManufaturer("!Apple");
+		phone.setUnitsInStock(1000);
+		phone.setCondition("Refubished");
+		
+		Product tablet = new Product("P1236", "Galaxy Tab S", 900000);
+		phone.setDescription("4.7-inch, 1334 X 750 Retina HD display");
+		phone.setCategory("?Smart Phone");
+		phone.setManufaturer("?Apple");
+		phone.setUnitsInStock(1000);
+		phone.setCondition("Old");
+		
+		products.add(phone);
+		products.add(notebook);
+		products.add(tablet);
+		
 	}
-
-	public static List<Product> sort(List<Product> products) {
-		// 정렬.....
-		return new LinkedList<>();
+	
+	public List<Product> getAllProducts() {
+		return products;
 	}
-
 }
