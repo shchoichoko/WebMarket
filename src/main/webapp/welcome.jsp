@@ -31,8 +31,7 @@
         Date now = new Date();
         SimpleDateFormat format = new SimpleDateFormat("hh:mm:ss a");
         %>
-        현재 접속 시각: <%= format.format(now) %>
-      </div>
+        현재 접속 시각: <%= format.format(now) %>      </div>
     </div>
 
     <footer class="container">
