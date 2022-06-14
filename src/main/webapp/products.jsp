@@ -34,7 +34,7 @@
             
             out.print(session.getAttribute("foods"));
             //싱글턴 패턴
-            ProductRepository repository = ProductRepository.getInstance();
+            ProductRepository repository = ProductRepository.getInstance();						
             List<Product> products = repository.getAllProducts();
             for (int i = 0; i < products.size(); i++) {
                 Product product = products.get(i);

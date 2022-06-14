@@ -40,9 +40,7 @@
 
        session.setAttribute("foods", foods);
        
-       session.setAttribute("name", "오준석");
-       session.setAttribute("age", 22);
-       session.setMaxInactiveInterval(5);
+       session.setMaxInactiveInterval(5);// 세션 만료 기간 5초로 설정하기
        %>
 
 		</div>
