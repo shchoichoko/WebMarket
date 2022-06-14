@@ -5,6 +5,7 @@
 <%
 
 //post로 넘어온것
+request.setCharacterEncoding("UTF-8");//한글 깨짐 방지
 String productId = request.getParameter("productId");
 String name = request.getParameter("name");
 int unitPrice = Integer.parseInt(request.getParameter("unitPrice"));
