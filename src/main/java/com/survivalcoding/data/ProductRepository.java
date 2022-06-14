@@ -57,8 +57,8 @@ public class ProductRepository {
                 .get(); // 얻어
     }
     
-    public void adddProduct() {
-    	
+    public void addProduct(Product product) {
+    	products.add(product);
     }
 
 }

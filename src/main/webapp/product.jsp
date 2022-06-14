@@ -3,7 +3,7 @@
     <%@page import="java.util.List" %>
       <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
         <!DOCTYPE html>
-
+		
         <html>
 
         <head>
@@ -15,7 +15,6 @@
 
         <body>
           <jsp:include page="menu.jsp"></jsp:include>
-
           <div class="p-5 bg-primary text-white">
             <div class="container">
               <h1 class="display-3">상품 정보</h1>
@@ -23,7 +22,7 @@
           </div>
 			
           <%
-          // <jsp:useBean id="repository" class="com.survivalcoding.data.ProductRepository" scope="session"></jsp:useBean>
+		//<jsp:useBean id="repository" class="com.survivalcoding.data.ProductRepository" scope="session"></jsp:useBean>
           ProductRepository repository = ProductRepository.getInstance();
           String id=request.getParameter("id"); Product product=repository.getProductById(id); %>
             <div class="container">
