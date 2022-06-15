@@ -1,9 +1,8 @@
-<%@page import="com.survivalcoding.data.ProductRepository"%>
+<%@page import="com.survivalcoding.domain.repository.ProductRepository"%>
 <%@page import="com.survivalcoding.domain.model.Product"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
-
 //post로 넘어온것
 request.setCharacterEncoding("UTF-8");//한글 깨짐 방지
 String productId = request.getParameter("productId");
@@ -28,5 +27,4 @@ product.setCondition(condition);
 repository.addProduct(product);
 
 response.sendRedirect("products.jsp");
-
 %>
