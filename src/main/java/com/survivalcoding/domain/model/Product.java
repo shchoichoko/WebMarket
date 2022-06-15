@@ -15,7 +15,7 @@ public class Product {
  private String manufacturer;
  private String category;
  private long unitsInStock;
- private String condition;
+ private String codition;
 
  public Product(String id, String name, int unitPrice) {
      this.id = id;
@@ -75,12 +75,12 @@ public class Product {
      this.unitsInStock = unitsInStock;
  }
 
- public String getCondition() {
-     return condition;
+ public String getCodition() {
+     return codition;
  }
 
- public void setCondition(String condition) {
-     this.condition = condition;
+ public void setCodition(String condition) {
+     this.codition = codition;
  }
 
  @Override
@@ -104,6 +104,6 @@ public class Product {
  public String toString() {
      return "Product [id=" + id + ", name=" + name + ", unitPrice=" + unitPrice
              + ", description=" + description + ", manufacturer=" + manufacturer + ", category="
-             + category + ", unitsInStock=" + unitsInStock + ", condition=" + condition + "]";
+             + category + ", unitsInStock=" + unitsInStock + ", codition=" + codition + "]";
  }
 }

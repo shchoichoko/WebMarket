@@ -1,10 +1,8 @@
-<%@page import="com.survivalcoding.domain.repository.ProductRepository"%>
 <%@page import="com.survivalcoding.domain.model.Product"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-
 <html>
 
 <head>
@@ -27,7 +25,8 @@
 	</div>
 
 	<div class="container">
-		<form name="newProduct" action="processAddProduct.jsp" method="post" class="form-horizontal">
+		<form name="newProduct" action="processAddProduct.jsp" method="post"
+			class="form-horizontal">
 			<div class="form-group row m-3">
 				<label class="col-sm-2">상품 코드</label>
 				<div class="col-sm-3">
@@ -49,13 +48,13 @@
 			<div class="form-group row m-3">
 				<label class="col-sm-2">상세 정보</label>
 				<div class="col-sm-3">
-					<textarea name="description" class="form-control"></textarea>
+					<textarea type="text" name="description" class="form-control"></textarea>
 				</div>
 			</div>
 			<div class="form-group row m-3">
 				<label class="col-sm-2">제조사</label>
 				<div class="col-sm-3">
-					<input type="text" name="manufaturer" class="form-control">
+					<input type="text" name="manufacturer" class="form-control">
 				</div>
 			</div>
 			<div class="form-group row m-3">
@@ -65,7 +64,7 @@
 				</div>
 			</div>
 			<div class="form-group row m-3">
-				<label class="col-sm-2">재고수</label>
+				<label class="col-sm-2">재고 수</label>
 				<div class="col-sm-3">
 					<input type="text" name="unitsInStock" class="form-control">
 				</div>
@@ -73,19 +72,18 @@
 			<div class="form-group row m-3">
 				<label class="col-sm-2">상태</label>
 				<div class="col-sm-3">
-					<input type="radio" name="condition" value="New" checked>신규 제품
-					<input type="radio" name="condition" value="Old">중고 제품
-					<input type="radio" name="condition" value="Refurbished">재생 제품
+					<input type="radio" name="condition" value="New" checked>신규
+					제품 <input type="radio" name="condition" value="Old">중고 제품 <input
+						type="radio" name="condition" value="Refurbished">재생 제품
 				</div>
 			</div>
 			<div class="form-group row">
-				<div class="dol-sm-offset-2 col-sm-10">
+				<div class="col-sm-offset-2 col-sm-10">
 					<input type="submit" class="btn btn-primary" value="등록">
 				</div>
 			</div>
 		</form>
 	</div>
-	
 
 	<jsp:include page="footer.jsp"></jsp:include>
 </body>
